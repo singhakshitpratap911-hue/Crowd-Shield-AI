@@ -1,0 +1,10 @@
+# Optional heavy dependencies — install ONLY if the base install succeeded
+# and you need MP3/FLAC support in the Audio Anomaly module.
+#
+# librosa pulls in numba which may lag Python 3.14. If it fails to install,
+# the app still works: the audio module falls back to a pure-numpy WAV reader.
+#
+# Install with:  pip install -r requirements-optional.txt
+
+librosa>=0.10
+audioread>=3.0

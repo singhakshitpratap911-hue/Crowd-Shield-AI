@@ -1,0 +1,39 @@
+# =============================================================================
+#  Multi-Modal Stampede Detection v4 — Python 3.14 compatible
+# =============================================================================
+# All versions below have pre-built wheels for CPython 3.14 on Windows x86_64.
+# Install with:   pip install -r requirements.txt --only-binary=:all:
+# (the --only-binary flag guarantees pip will NOT try to compile from source)
+# =============================================================================
+
+# --- Core numerics (Python 3.14 wheels available) ---
+numpy>=2.1.0
+pandas>=2.2.3
+
+# --- Web UI ---
+streamlit>=1.38
+plotly>=5.24
+
+# --- Imaging ---
+pillow>=10.4
+opencv-python-headless>=4.10
+
+# --- ML backends ---
+# PyTorch 2.5+ ships Python 3.14 wheels for Windows.
+# For CUDA GPU (recommended): after this install, run:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124 --upgrade
+torch>=2.5
+torchvision>=0.20
+ultralytics>=8.3
+
+# --- Audio (real FFT / spectral) ---
+# librosa is optional; if it fails to install on 3.14, the app falls back
+# to a pure-numpy WAV reader (documented in detectors.py).
+soundfile>=0.12
+
+# --- Real Twilio SMS + config ---
+twilio>=9.0
+python-dotenv>=1.0
+
+# --- Clustering ---
+scikit-learn>=1.5
